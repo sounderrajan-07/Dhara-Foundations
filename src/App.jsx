@@ -111,24 +111,24 @@ export default function App() {
       {/* Nav */}
       <header className="nav">
   <div className="nav-inner">
-    <a href="#" className="logo" onClick={(e) => { e.preventDefault(); handleNavClick('home-section'); }}>
+    <a href="#" className="logo" onClick={(e) => { e.preventDefault(); setActiveTab('home'); }}>
       <span className="logo-emblem"><img src="/logo/photo_6195100629672333271_y.jpg" alt="Dhara Foundations emblem" /></span>
       <span className="logo-text">DHARA<small>FOUNDATIONS</small></span>
     </a>
     <nav className="links">
-      <a href="#" onClick={(e) => { e.preventDefault(); handleNavClick('home-section'); }}>Home</a>
-      <a href="#highlights-section" onClick={(e) => { e.preventDefault(); handleNavClick('highlights-section'); }}>Highlights</a>
-      <a href="#registration-section" onClick={(e) => { e.preventDefault(); handleNavClick('registration-section'); }}>Register</a>
-      <a href="#nominations-section" onClick={(e) => { e.preventDefault(); handleNavClick('nominations-section'); }}>Nominate</a>
-      <a href="#sponsorship-section" onClick={(e) => { e.preventDefault(); handleNavClick('sponsorship-section'); }}>Sponsors</a>
-      <a href="#csr-section" onClick={(e) => { e.preventDefault(); handleNavClick('csr-section'); }}>CSR</a>
-      <a href="#volunteer-section" onClick={(e) => { e.preventDefault(); handleNavClick('volunteer-section'); }}>Volunteer</a>
-      <a href="#donor-section" onClick={(e) => { e.preventDefault(); handleNavClick('donor-section'); }}>Donate</a>
-      <a href="#media-section" onClick={(e) => { e.preventDefault(); handleNavClick('media-section'); }}>Media</a>
-      <a href="#contact-section" onClick={(e) => { e.preventDefault(); handleNavClick('contact-section'); }}>Contact</a>
+      <a href="#" className={activeTab === 'home' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('home'); }}>Home</a>
+      <a href="#" className={activeTab === 'highlights' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('highlights'); }}>Highlights</a>
+      <a href="#" className={activeTab === 'registration' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('registration'); }}>Register</a>
+      <a href="#" className={activeTab === 'nominations' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('nominations'); }}>Nominate</a>
+      <a href="#" className={activeTab === 'sponsorship' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('sponsorship'); }}>Sponsors</a>
+      <a href="#" className={activeTab === 'csr' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('csr'); }}>CSR</a>
+      <a href="#" className={activeTab === 'volunteer' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('volunteer'); }}>Volunteer</a>
+      <a href="#" className={activeTab === 'donor' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('donor'); }}>Donate</a>
+      <a href="#" className={activeTab === 'media' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('media'); }}>Media</a>
+      <a href="#" className={activeTab === 'contact' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('contact'); }}>Contact</a>
     </nav>
     <div className="nav-cta">
-      <button onClick={() => handleNavClick('nominations-section')} className="btn btn-gold">Nominate Now</button>
+      <button onClick={() => setActiveTab('nominations')} className="btn btn-gold">Nominate Now</button>
     </div>
     <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="menu-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
@@ -140,20 +140,20 @@ export default function App() {
       {mobileMenuOpen && (
         <div className="lg:hidden" style={{ background: 'var(--ivory-deep)', borderBottom: '1px solid var(--line)', padding: '16px 20px', position: 'sticky', top: '73px', zIndex: '49' }}>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-            <a href="#" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); handleNavClick('home-section'); }}>Home</a>
-            <a href="#highlights-section" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); handleNavClick('highlights-section'); }}>Highlights</a>
-            <a href="#registration-section" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); handleNavClick('registration-section'); }}>Register</a>
-            <a href="#nominations-section" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); handleNavClick('nominations-section'); }}>Nominate</a>
-            <a href="#sponsorship-section" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); handleNavClick('sponsorship-section'); }}>Sponsors</a>
-            <a href="#csr-section" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); handleNavClick('csr-section'); }}>CSR</a>
-            <a href="#volunteer-section" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); handleNavClick('volunteer-section'); }}>Volunteer</a>
-            <a href="#donor-section" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); handleNavClick('donor-section'); }}>Donate</a>
-            <a href="#media-section" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); handleNavClick('media-section'); }}>Media</a>
-            <a href="#contact-section" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); handleNavClick('contact-section'); }}>Contact</a>
+            <a href="#" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); setActiveTab('home'); }}>Home</a>
+            <a href="#" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); setActiveTab('highlights'); }}>Highlights</a>
+            <a href="#" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); setActiveTab('registration'); }}>Register</a>
+            <a href="#" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); setActiveTab('nominations'); }}>Nominate</a>
+            <a href="#" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); setActiveTab('sponsorship'); }}>Sponsors</a>
+            <a href="#" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); setActiveTab('csr'); }}>CSR</a>
+            <a href="#" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); setActiveTab('volunteer'); }}>Volunteer</a>
+            <a href="#" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); setActiveTab('donor'); }}>Donate</a>
+            <a href="#" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); setActiveTab('media'); }}>Media</a>
+            <a href="#" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); setActiveTab('contact'); }}>Contact</a>
             
             <div style={{ height: '1px', background: 'var(--line)', margin: '8px 0' }} />
             
-            <button onClick={() => handleNavClick('nominations-section')} className="btn btn-gold" style={{ width: '100%', justifyContent: 'center' }}>Nominate Now</button>
+            <button onClick={() => setActiveTab('nominations')} className="btn btn-gold" style={{ width: '100%', justifyContent: 'center' }}>Nominate Now</button>
           </div>
         </div>
       )}
@@ -186,8 +186,8 @@ export default function App() {
         <h1>Kindness in Action, <em>Faith</em> in Every Step</h1>
         <p className="lede">Dhara Foundations stands beside the poor, the forgotten, and the faithful — feeding the hungry, restoring sacred spaces, and giving dignity to those society often overlooks.</p>
         <div className="hero-actions">
-          <button onClick={() => handleNavClick('donor-section')} className="btn btn-primary">Donate Now</button>
-          <button onClick={(e) => { e.preventDefault(); handleNavClick('registration-section'); }} className="btn btn-ghost">Explore Divine Awards 2026 →</button>
+          <button onClick={() => setActiveTab('donor')} className="btn btn-primary">Donate Now</button>
+          <button onClick={(e) => { e.preventDefault(); setActiveTab('registration'); }} className="btn btn-ghost">Explore Divine Awards 2026 →</button>
         </div>
         <div className="hero-stats">
           <div className="hero-stat"><div className="num">3</div><div className="label">Founding Trustees</div></div>
@@ -405,7 +405,7 @@ export default function App() {
     </div>
     <div className="impact-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
       
-      <div onClick={() => handleNavClick('registration-section')} className="impact-card cursor-pointer" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
+      <div onClick={() => setActiveTab('registration')} className="impact-card cursor-pointer" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
         <div>
           <div className="impact-icon" style={{ background: 'linear-gradient(135deg,#FCE6BC,#F0C266)' }}>
             <Ticket className="w-5 h-5 text-[#A85A1E]" />
@@ -419,7 +419,7 @@ export default function App() {
         </div>
       </div>
 
-      <div onClick={() => handleNavClick('sponsorship-section')} className="impact-card cursor-pointer" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
+      <div onClick={() => setActiveTab('sponsorship')} className="impact-card cursor-pointer" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
         <div>
           <div className="impact-icon" style={{ background: 'linear-gradient(135deg,#D6EFD0,#9FD494)' }}>
             <Handshake className="w-5 h-5 text-[#2D6440]" />
@@ -433,7 +433,7 @@ export default function App() {
         </div>
       </div>
 
-      <div onClick={() => handleNavClick('volunteer-section')} className="impact-card cursor-pointer" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
+      <div onClick={() => setActiveTab('volunteer')} className="impact-card cursor-pointer" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
         <div>
           <div className="impact-icon" style={{ background: 'linear-gradient(135deg,#CDEFEC,#7FD9D2)' }}>
             <Heart className="w-5 h-5 text-[#146E6A]" />
@@ -447,7 +447,7 @@ export default function App() {
         </div>
       </div>
 
-      <div onClick={() => handleNavClick('donor-section')} className="impact-card cursor-pointer" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
+      <div onClick={() => setActiveTab('donor')} className="impact-card cursor-pointer" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
         <div>
           <div className="impact-icon" style={{ background: 'linear-gradient(135deg,#F0D6D6,#E3A8A4)' }}>
             <Gift className="w-5 h-5 text-[#B23A36]" />
@@ -461,7 +461,7 @@ export default function App() {
         </div>
       </div>
 
-      <div onClick={() => handleNavClick('csr-section')} className="impact-card cursor-pointer" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
+      <div onClick={() => setActiveTab('csr')} className="impact-card cursor-pointer" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
         <div>
           <div className="impact-icon" style={{ background: 'linear-gradient(135deg,#FCE6BC,#F0C266)' }}>
             <Briefcase className="w-5 h-5 text-[#A85A1E]" />
@@ -475,7 +475,7 @@ export default function App() {
         </div>
       </div>
 
-      <div onClick={() => handleNavClick('nominations-section')} className="impact-card cursor-pointer" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
+      <div onClick={() => setActiveTab('nominations')} className="impact-card cursor-pointer" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
         <div>
           <div className="impact-icon" style={{ background: 'linear-gradient(135deg,#D6EFD0,#9FD494)' }}>
             <Award className="w-5 h-5 text-[#2D6440]" />
@@ -489,7 +489,7 @@ export default function App() {
         </div>
       </div>
 
-      <div onClick={() => handleNavClick('media-section')} className="impact-card cursor-pointer" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
+      <div onClick={() => setActiveTab('media')} className="impact-card cursor-pointer" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
         <div>
           <div className="impact-icon" style={{ background: 'linear-gradient(135deg,#CDEFEC,#7FD9D2)' }}>
             <Newspaper className="w-5 h-5 text-[#146E6A]" />
@@ -503,7 +503,7 @@ export default function App() {
         </div>
       </div>
 
-      <div onClick={() => handleNavClick('highlights-section')} className="impact-card cursor-pointer" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
+      <div onClick={() => setActiveTab('highlights')} className="impact-card cursor-pointer" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
         <div>
           <div className="impact-icon" style={{ background: 'linear-gradient(135deg,#F0D6D6,#E3A8A4)' }}>
             <Image className="w-5 h-5 text-[#B23A36]" />
@@ -517,7 +517,7 @@ export default function App() {
         </div>
       </div>
 
-      <div onClick={() => handleNavClick('contact-section')} className="impact-card cursor-pointer" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
+      <div onClick={() => setActiveTab('contact')} className="impact-card cursor-pointer" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
         <div>
           <div className="impact-icon" style={{ background: 'linear-gradient(135deg,#FCE6BC,#F0C266)' }}>
             <MessageSquare className="w-5 h-5 text-[#A85A1E]" />
@@ -534,51 +534,6 @@ export default function App() {
     </div>
   </div>
 </section>
-
-      {/* 9. Event Highlights Section */}
-      <section id="highlights-section" className="reveal border-t border-neutral-100">
-        <EventHighlights />
-      </section>
-
-      {/* 2. Divine Awards 2026 Event Registration Section */}
-      <section id="registration-section" className="reveal border-t border-neutral-100">
-        <EventRegistration onSubmitSuccess={handleFormSuccess} />
-      </section>
-
-      {/* 7. Award Nominations Section */}
-      <section id="nominations-section" className="reveal border-t border-neutral-100">
-        <AwardNominations onSubmitSuccess={handleFormSuccess} />
-      </section>
-
-      {/* 3. Sponsorship Opportunities Section */}
-      <section id="sponsorship-section" className="reveal border-t border-neutral-100">
-        <Sponsorship onSubmitSuccess={handleFormSuccess} />
-      </section>
-
-      {/* 6. Corporate CSR Partnership Section */}
-      <section id="csr-section" className="reveal border-t border-neutral-100">
-        <CorporateCSR onSubmitSuccess={handleFormSuccess} />
-      </section>
-
-      {/* 4. Volunteer Registration Section */}
-      <section id="volunteer-section" className="reveal border-t border-neutral-100">
-        <Volunteer onSubmitSuccess={handleFormSuccess} />
-      </section>
-
-      {/* 5. Donor Support Section */}
-      <section id="donor-section" className="reveal border-t border-neutral-100">
-        <DonorSupport onSubmitSuccess={handleFormSuccess} />
-      </section>
-
-      {/* 8. Media Coverage Section */}
-      <section id="media-section" className="reveal border-t border-neutral-100">
-        <MediaCoverage onSubmitSuccess={handleFormSuccess} />
-      </section>
-
-      {/* 10. General Event Enquiries Section */}
-      <section id="contact-section" className="reveal border-t border-neutral-100">
-        <GeneralEnquiries onSubmitSuccess={handleFormSuccess} />
-      </section>
 <section id="events" className="reveal">
   <div className="wrap">
     <div className="events-head">
@@ -662,8 +617,8 @@ export default function App() {
       <h2>Join hands with us</h2>
       <p>Whether through volunteering, sponsorship, or a one-time gift — every contribution carries our mission forward.</p>
       <div className="cta-actions">
-        <button onClick={() => handleNavClick('volunteer-section')} className="btn btn-light">Become a Volunteer</button>
-        <button onClick={() => handleNavClick('donor-section')} className="btn" style={{"background":"#fff","color":"var(--sunrise-deep)"}}>Donate Now</button>
+        <button onClick={() => setActiveTab('volunteer')} className="btn btn-light">Become a Volunteer</button>
+        <button onClick={() => setActiveTab('donor')} className="btn" style={{"background":"#fff","color":"var(--sunrise-deep)"}}>Donate Now</button>
       </div>
     </div>
   </div>
@@ -673,7 +628,69 @@ export default function App() {
           </div>
         )}
 
-        </main>
+        {/* 2. Divine Awards 2026 Event Registration */}
+        {activeTab === 'registration' && (
+          <div className="animate-fade-in">
+            <EventRegistration onSubmitSuccess={handleFormSuccess} />
+          </div>
+        )}
+
+        {/* 3. Sponsorship Opportunities */}
+        {activeTab === 'sponsorship' && (
+          <div className="animate-fade-in">
+            <Sponsorship onSubmitSuccess={handleFormSuccess} />
+          </div>
+        )}
+
+        {/* 4. Volunteer Registration */}
+        {activeTab === 'volunteer' && (
+          <div className="animate-fade-in">
+            <Volunteer onSubmitSuccess={handleFormSuccess} />
+          </div>
+        )}
+
+        {/* 5. Donor Support */}
+        {activeTab === 'donor' && (
+          <div className="animate-fade-in">
+            <DonorSupport onSubmitSuccess={handleFormSuccess} />
+          </div>
+        )}
+
+        {/* 6. Corporate CSR Partnership */}
+        {activeTab === 'csr' && (
+          <div className="animate-fade-in">
+            <CorporateCSR onSubmitSuccess={handleFormSuccess} />
+          </div>
+        )}
+
+        {/* 7. Award Nominations */}
+        {activeTab === 'nominations' && (
+          <div className="animate-fade-in">
+            <AwardNominations onSubmitSuccess={handleFormSuccess} />
+          </div>
+        )}
+
+        {/* 8. Media Coverage */}
+        {activeTab === 'media' && (
+          <div className="animate-fade-in">
+            <MediaCoverage onSubmitSuccess={handleFormSuccess} />
+          </div>
+        )}
+
+        {/* 9. Event Highlights */}
+        {activeTab === 'highlights' && (
+          <div className="animate-fade-in">
+            <EventHighlights />
+          </div>
+        )}
+
+        {/* 10. General Event Enquiries */}
+        {activeTab === 'contact' && (
+          <div className="animate-fade-in">
+            <GeneralEnquiries onSubmitSuccess={handleFormSuccess} />
+          </div>
+        )}
+      </main>
 
       {/* Footer */}
       <footer id="contact-section">
