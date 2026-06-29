@@ -394,7 +394,7 @@ section { padding: 100px 0; position:relative; }
 .impact-card:nth-child(1) .impact-icon { background: linear-gradient(135deg,#FCE6BC,#F0C266); }
 .impact-card:nth-child(2) .impact-icon { background: linear-gradient(135deg,#D6EFD0,#9FD494); }
 .impact-card:nth-child(3) .impact-icon { background: linear-gradient(135deg,#CDEFEC,#7FD9D2); }
-.impact-card:nth-child(4) .impact-icon { background: linear-gradient(135deg,#F0D6D6,#E3A8A4); }
+.impact-card:nth-child(4) .impact-icon { background: linear-gradient(135deg,#FCE6BC,#F0C266); }
 .impact-icon svg { width:22px; height:22px; }
 .impact-card h4 { font-size:15px; margin-bottom:6px; }
 .impact-card p { font-size:13px; color:var(--ink-soft); }

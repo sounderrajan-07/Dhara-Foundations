@@ -209,7 +209,7 @@ export default function App() {
           <p>Festive clothing and footwear drives for children in government homes.</p>
         </div>
         <div className="impact-card">
-          <div className="impact-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-9-9c-1.4-3 .5-6.5 4-6.5 2 0 3.6 1.2 5 3 1.4-1.8 3-3 5-3 3.5 0 5.4 3.5 4 6.5-2 4.5-9 9-9 9z" stroke="#B23A36" strokeWidth="1.6"/></svg></div>
+          <div className="impact-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-9-9c-1.4-3 .5-6.5 4-6.5 2 0 3.6 1.2 5 3 1.4-1.8 3-3 5-3 3.5 0 5.4 3.5 4 6.5-2 4.5-9 9-9 9z" stroke="#A85A1E" strokeWidth="1.6"/></svg></div>
           <h4>Health &amp; Relief</h4>
           <p>Emergency relief support, including pandemic-era response for vulnerable groups.</p>
         </div>
@@ -394,8 +394,8 @@ export default function App() {
 
       <div onClick={() => setActiveTab('donor')} className="impact-card cursor-pointer" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
         <div>
-          <div className="impact-icon" style={{ background: 'linear-gradient(135deg,#F0D6D6,#E3A8A4)' }}>
-            <Gift className="w-5 h-5 text-[#B23A36]" />
+          <div className="impact-icon" style={{ background: 'linear-gradient(135deg,#FCE6BC,#F0C266)' }}>
+            <Gift className="w-5 h-5 text-[#A85A1E]" />
           </div>
           <h4 style={{ fontFamily: 'var(--display)', fontSize: '18px', fontWeight: '600', color: 'var(--ink)' }}>Giving Gateway</h4>
           <p>Pre-set micro-donations and claim 80G tax benefits.</p>
@@ -408,8 +408,8 @@ export default function App() {
 
       <div onClick={() => setActiveTab('csr')} className="impact-card cursor-pointer" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
         <div>
-          <div className="impact-icon" style={{ background: 'linear-gradient(135deg,#FCE6BC,#F0C266)' }}>
-            <Briefcase className="w-5 h-5 text-[#A85A1E]" />
+          <div className="impact-icon" style={{ background: 'linear-gradient(135deg,#D6EFD0,#9FD494)' }}>
+            <Briefcase className="w-5 h-5 text-[#2D6440]" />
           </div>
           <h4 style={{ fontFamily: 'var(--display)', fontSize: '18px', fontWeight: '600', color: 'var(--ink)' }}>Corporate CSR</h4>
           <p>Register institutional budgets, CIN, and joint targets.</p>
@@ -422,8 +422,8 @@ export default function App() {
 
       <div onClick={() => setActiveTab('nominations')} className="impact-card cursor-pointer" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
         <div>
-          <div className="impact-icon" style={{ background: 'linear-gradient(135deg,#D6EFD0,#9FD494)' }}>
-            <Award className="w-5 h-5 text-[#2D6440]" />
+          <div className="impact-icon" style={{ background: 'linear-gradient(135deg,#CDEFEC,#7FD9D2)' }}>
+            <Award className="w-5 h-5 text-[#146E6A]" />
           </div>
           <h4 style={{ fontFamily: 'var(--display)', fontSize: '18px', fontWeight: '600', color: 'var(--ink)' }}>Award Nominations</h4>
           <p>Submit multi-step nominations for grassroots unsung heroes.</p>
@@ -436,8 +436,8 @@ export default function App() {
 
       <div onClick={() => setActiveTab('media')} className="impact-card cursor-pointer" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
         <div>
-          <div className="impact-icon" style={{ background: 'linear-gradient(135deg,#CDEFEC,#7FD9D2)' }}>
-            <Newspaper className="w-5 h-5 text-[#146E6A]" />
+          <div className="impact-icon" style={{ background: 'linear-gradient(135deg,#FCE6BC,#F0C266)' }}>
+            <Newspaper className="w-5 h-5 text-[#A85A1E]" />
           </div>
           <h4 style={{ fontFamily: 'var(--display)', fontSize: '18px', fontWeight: '600', color: 'var(--ink)' }}>Press & Media Kit</h4>
           <p>Request journalist credentials and download media assets.</p>
@@ -450,8 +450,8 @@ export default function App() {
 
       <div onClick={() => setActiveTab('highlights')} className="impact-card cursor-pointer" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
         <div>
-          <div className="impact-icon" style={{ background: 'linear-gradient(135deg,#F0D6D6,#E3A8A4)' }}>
-            <Image className="w-5 h-5 text-[#B23A36]" />
+          <div className="impact-icon" style={{ background: 'linear-gradient(135deg,#D6EFD0,#9FD494)' }}>
+            <Image className="w-5 h-5 text-[#2D6440]" />
           </div>
           <h4 style={{ fontFamily: 'var(--display)', fontSize: '18px', fontWeight: '600', color: 'var(--ink)' }}>Event Highlights</h4>
           <p>View statistics, visual archives, and annual impact reports.</p>
@@ -464,8 +464,8 @@ export default function App() {
 
       <div onClick={() => setActiveTab('contact')} className="impact-card cursor-pointer" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%' }}>
         <div>
-          <div className="impact-icon" style={{ background: 'linear-gradient(135deg,#FCE6BC,#F0C266)' }}>
-            <MessageSquare className="w-5 h-5 text-[#A85A1E]" />
+          <div className="impact-icon" style={{ background: 'linear-gradient(135deg,#CDEFEC,#7FD9D2)' }}>
+            <MessageSquare className="w-5 h-5 text-[#146E6A]" />
           </div>
           <h4 style={{ fontFamily: 'var(--display)', fontSize: '18px', fontWeight: '600', color: 'var(--ink)' }}>General Enquiries</h4>
           <p>Submit questions and get quick guidance or support.</p>
