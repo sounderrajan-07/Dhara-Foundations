@@ -150,10 +150,6 @@ export default function App() {
           <div><div className="t1">CSR Registered</div><div className="t2">Reg. No. CSR00034928</div></div>
         </div>
         <div className="hero-photo">
-          <div className="cap">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2 2 7l10 5 10-5-10-5z" stroke="#fff" strokeWidth="1.5"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="#fff" strokeWidth="1.5"/></svg>
-            Tribal welfare outreach, Javadhu Hills
-          </div>
         </div>
       </div>
     </div>

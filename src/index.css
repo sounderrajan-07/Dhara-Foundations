@@ -329,7 +329,7 @@ nav.links a:hover::after, nav.links a.active::after { width: 100%; }
   position:relative;
   border-radius: 32px;
   aspect-ratio: 4/4.5;
-  background: url('/images/Home.png') center/cover no-repeat;
+  background: url('/images/News/DHARA Divine Awards.jpg') center/cover no-repeat;
   overflow:hidden;
   box-shadow: 0 44px 80px -32px rgba(31,35,24,0.32);
   z-index:1;
