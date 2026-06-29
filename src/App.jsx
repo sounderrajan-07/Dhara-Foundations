@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { 
-  Menu, X, Award, Ticket, Handshake, Heart, Gift, 
+  X, Award, Ticket, Handshake, Heart, Gift, 
   Briefcase, Newspaper, Image, MessageSquare, ExternalLink, 
   CheckCircle, Share2, ArrowRight, Sparkles 
 } from 'lucide-react';
@@ -14,6 +14,8 @@ import AwardNominations from './components/AwardNominations';
 import MediaCoverage from './components/MediaCoverage';
 import EventHighlights from './components/EventHighlights';
 import GeneralEnquiries from './components/GeneralEnquiries';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('home');
@@ -94,69 +96,12 @@ export default function App() {
 
   return (
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
-      
-      {/* Top utility bar */}
-      <div className="topbar">
-  <div className="wrap">
-    <div className="topbar-left">
-      <a href="tel:04422236641"><span>Helpline</span>044-22236641</a>
-      <a href="mailto:info@dharafoundations.in"><span>Email</span>info@dharafoundations.in</a>
-    </div>
-    <div className="topbar-left"><span style={{"opacity":".65"}}>Tambaram Sanatorium, Chennai</span></div>
-  </div>
-</div>
-
-{/* Nav */}
-
-      {/* Nav */}
-      <header className="nav">
-  <div className="nav-inner">
-    <a href="#" className="logo" onClick={(e) => { e.preventDefault(); setActiveTab('home'); }}>
-      <span className="logo-emblem"><img src="/logo/photo_6195100629672333271_y.jpg" alt="Dhara Foundations emblem" /></span>
-      <span className="logo-text">DHARA<small>FOUNDATIONS</small></span>
-    </a>
-    <nav className="links">
-      <a href="#" className={activeTab === 'home' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('home'); }}>Home</a>
-      <a href="#" className={activeTab === 'highlights' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('highlights'); }}>Highlights</a>
-      <a href="#" className={activeTab === 'registration' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('registration'); }}>Register</a>
-      <a href="#" className={activeTab === 'nominations' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('nominations'); }}>Nominate</a>
-      <a href="#" className={activeTab === 'sponsorship' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('sponsorship'); }}>Sponsors</a>
-      <a href="#" className={activeTab === 'csr' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('csr'); }}>CSR</a>
-      <a href="#" className={activeTab === 'volunteer' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('volunteer'); }}>Volunteer</a>
-      <a href="#" className={activeTab === 'donor' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('donor'); }}>Donate</a>
-      <a href="#" className={activeTab === 'media' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('media'); }}>Media</a>
-      <a href="#" className={activeTab === 'contact' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('contact'); }}>Contact</a>
-    </nav>
-    <div className="nav-cta">
-      <button onClick={() => setActiveTab('nominations')} className="btn btn-gold">Nominate Now</button>
-    </div>
-    <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="menu-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
-  </div>
-</header>
-
-{/* Hero */}
-
-      {/* Mobile nav dropdown overlay */}
-      {mobileMenuOpen && (
-        <div className="lg:hidden" style={{ background: 'var(--ivory-deep)', borderBottom: '1px solid var(--line)', padding: '16px 20px', position: 'sticky', top: '73px', zIndex: '49' }}>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-            <a href="#" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); setActiveTab('home'); }}>Home</a>
-            <a href="#" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); setActiveTab('highlights'); }}>Highlights</a>
-            <a href="#" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); setActiveTab('registration'); }}>Register</a>
-            <a href="#" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); setActiveTab('nominations'); }}>Nominate</a>
-            <a href="#" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); setActiveTab('sponsorship'); }}>Sponsors</a>
-            <a href="#" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); setActiveTab('csr'); }}>CSR</a>
-            <a href="#" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); setActiveTab('volunteer'); }}>Volunteer</a>
-            <a href="#" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); setActiveTab('donor'); }}>Donate</a>
-            <a href="#" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); setActiveTab('media'); }}>Media</a>
-            <a href="#" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); setActiveTab('contact'); }}>Contact</a>
-            
-            <div style={{ height: '1px', background: 'var(--line)', margin: '8px 0' }} />
-            
-            <button onClick={() => setActiveTab('nominations')} className="btn btn-gold" style={{ width: '100%', justifyContent: 'center' }}>Nominate Now</button>
-          </div>
-        </div>
-      )}
+      <Navbar 
+        activeTab={activeTab} 
+        setActiveTab={setActiveTab} 
+        mobileMenuOpen={mobileMenuOpen} 
+        setMobileMenuOpen={setMobileMenuOpen} 
+      />
 
       {/* Main Content Area */}
       <main style={{ flex: '1 0 auto' }}>
@@ -692,55 +637,7 @@ export default function App() {
         )}
       </main>
 
-      {/* Footer */}
-      <footer id="contact-section">
-  <div className="wrap">
-    <div className="footer-grid">
-      <div>
-        <a href="#" className="footer-logo">
-          <span className="logo-emblem"><img src="/logo/photo_6195100629672333271_y.jpg" alt="Dhara Foundations emblem" /></span>
-          <span className="logo-text">DHARA<small>FOUNDATIONS</small></span>
-        </a>
-        <p className="footer-about">A non-profit trust dedicated to transforming lives and protecting traditions — across culture, spirituality, and community welfare.</p>
-        <div className="footer-social">
-          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none"><path d="M14 9h2.5V6H14c-2 0-3.5 1.5-3.5 3.5V11H8v3h2.5v6H14v-6h2.2l.5-3H14V9.6c0-.4.3-.6.6-.6z" fill="#C9D6C1"/></svg></a>
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="5" stroke="#C9D6C1" strokeWidth="1.5"/><circle cx="12" cy="12" r="3.4" stroke="#C9D6C1" strokeWidth="1.5"/><circle cx="16.6" cy="7.4" r="1" fill="#C9D6C1"/></svg></a>
-          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="3" stroke="#C9D6C1" strokeWidth="1.5"/><path d="M10.5 9.5l5 2.5-5 2.5v-5z" fill="#C9D6C1"/></svg></a>
-        </div>
-      </div>
-      <div className="footer-col">
-        <h5>Explore</h5>
-        <ul>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#programs" onClick={(e) => { e.preventDefault(); handleNavClick('programs'); }}>Programs</a></li>
-          <li><a href="#awards" onClick={(e) => { e.preventDefault(); handleNavClick('awards'); }}>Divine Awards</a></li>
-          <li><a href="#events" onClick={(e) => { e.preventDefault(); handleNavClick('events'); }}>Events</a></li>
-        </ul>
-      </div>
-      <div className="footer-col">
-        <h5>Get Involved</h5>
-        <ul>
-          <li><a href="#">Volunteer</a></li>
-          <li><a href="#">Donate</a></li>
-          <li><a href="#">Sponsorship</a></li>
-          <li><a href="#">CSR Partnership</a></li>
-        </ul>
-      </div>
-      <div className="footer-col">
-        <h5>Contact</h5>
-        <ul className="footer-contact">
-          <li><svg viewBox="0 0 24 24" fill="none"><path d="M12 22s7-7.5 7-12.5A7 7 0 0 0 5 9.5C5 14.5 12 22 12 22z" stroke="currentColor" strokeWidth="1.6"/></svg>No 44A, 3rd Street, Judge Colony, Tambaram Sanatorium, Chennai – 600047</li>
-          <li><svg viewBox="0 0 24 24" fill="none"><path d="M22 16.9v2a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.2 3.2 2 2 0 0 1 4.2 1h2a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L7.1 8.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z" stroke="currentColor" strokeWidth="1.6"/></svg>044-22236641</li>
-          <li><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" strokeWidth="1.6"/><path d="M3 6l9 7 9-7" stroke="currentColor" strokeWidth="1.6"/></svg>info@dharafoundations.in</li>
-        </ul>
-      </div>
-    </div>
-    <div className="footer-bottom">
-      <span>© 2026 Dhara Foundations. All rights reserved.</span>
-      <span>Registered under Indian Trust Act 1882 · 12A: AAATD9284LE20 · 80G: AAATD9284LF20 · CSR00034928</span>
-    </div>
-  </div>
-</footer>
+      <Footer handleNavClick={handleNavClick} />
 
       {/* 11. Thank You Confirmation Overlay State */}
       {showThankYou && successData && (
