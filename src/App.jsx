@@ -518,7 +518,7 @@ export default function App() {
     </div>
     <div className="news-grid">
       <div className="news-card">
-        <div className="news-thumb" style={{ backgroundImage: "url('/images/News/Dhara Foundation – Registrations & Certifications.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+        <div className="news-thumb" style={{ backgroundImage: "url('/images/News/Dhara Foundation Registrations & Certifications.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
         <div className="news-date">20 Feb, 2025</div>
         <h4>Dhara Foundation — Registrations &amp; Certifications</h4>
         <a href="#" className="news-link">Read More <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
