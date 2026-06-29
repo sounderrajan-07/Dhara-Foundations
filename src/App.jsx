@@ -150,18 +150,6 @@ export default function App() {
           <div><div className="t1">CSR Registered</div><div className="t2">Reg. No. CSR00034928</div></div>
         </div>
         <div className="hero-photo">
-          <div className="hands-motif">
-            <svg viewBox="0 0 240 240" fill="none">
-              <circle cx="120" cy="120" r="116" stroke="#FFFFFF" strokeWidth="0.8" opacity="0.35"/>
-              <path d="M55 150c0-12 8-22 20-26l20-7c6-2 12 0 16 5l4 5M185 150c0-12-8-22-20-26l-20-7c-6-2-12 0-16 5l-4 5"
-                stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" opacity="0.92"/>
-              <path d="M75 117l14 33c2 5 7 8 12 8h38c5 0 10-3 12-8l14-33"
-                stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" opacity="0.92"/>
-              <path d="M95 150c5 6 14 10 25 10s20-4 25-10" stroke="#FFF6E0" strokeWidth="2" strokeLinecap="round"/>
-              <circle cx="120" cy="80" r="7" fill="#FFF6E0" opacity="0.9"/>
-              <path d="M120 64v6M132 70l-4.5 4.5M108 70l4.5 4.5" stroke="#FFF6E0" strokeWidth="1.6" strokeLinecap="round"/>
-            </svg>
-          </div>
           <div className="cap">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2 2 7l10 5 10-5-10-5z" stroke="#fff" strokeWidth="1.5"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5" stroke="#fff" strokeWidth="1.5"/></svg>
             Tribal welfare outreach, Javadhu Hills
@@ -490,19 +478,19 @@ export default function App() {
     </div>
     <div className="events-row">
       <div className="event-card">
-        <div className="event-thumb"><div className="event-date"><div className="d">18</div><div className="m">Oct</div></div></div>
+        <div className="event-thumb" style={{ backgroundImage: "url('/images/Events/Providing Diwali Dresses To Home Children.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}><div className="event-date"><div className="d">18</div><div className="m">Oct</div></div></div>
         <div className="event-body"><div className="event-loc">📍 Cuddalore</div><h4>Providing Diwali dresses to home children</h4></div>
       </div>
       <div className="event-card">
-        <div className="event-thumb"><div className="event-date"><div className="d">01</div><div className="m">Jan</div></div></div>
+        <div className="event-thumb" style={{ backgroundImage: "url('/images/Events/In Digitisation activities for Women Self Help Group society.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}><div className="event-date"><div className="d">01</div><div className="m">Jan</div></div></div>
         <div className="event-body"><div className="event-loc">📍 Cuddalore</div><h4>Digitisation drive for Women Self-Help Groups</h4></div>
       </div>
       <div className="event-card">
-        <div className="event-thumb"><div className="event-date"><div className="d">06</div><div className="m">Nov</div></div></div>
+        <div className="event-thumb" style={{ backgroundImage: "url('/images/Events/In Tribal welfare activities at Javadhu hills.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}><div className="event-date"><div className="d">06</div><div className="m">Nov</div></div></div>
         <div className="event-body"><div className="event-loc">📍 Vellore</div><h4>Tribal welfare activities at Javadhu Hills</h4></div>
       </div>
       <div className="event-card">
-        <div className="event-thumb"><div className="event-date"><div className="d">14</div><div className="m">Jan</div></div></div>
+        <div className="event-thumb" style={{ backgroundImage: "url('/images/Events/Felicitation of Sports children at Cuddalore during Pongal festival.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}><div className="event-date"><div className="d">14</div><div className="m">Jan</div></div></div>
         <div className="event-body"><div className="event-loc">📍 Cuddalore</div><h4>Felicitation of sports children, Pongal</h4></div>
       </div>
     </div>
@@ -517,10 +505,10 @@ export default function App() {
       <h2>From our photo gallery</h2>
     </div>
     <div className="gallery-grid">
-      <div className="g-item tall g1"><div className="tag">Temple Restoration</div></div>
-      <div className="g-item g2"><div className="tag">Community Outreach</div></div>
-      <div className="g-item g3"><div className="tag">Divine Awards</div></div>
-      <div className="g-item g4"><div className="tag">Tribal Welfare</div></div>
+      <div className="g-item tall g1" style={{ backgroundImage: "url('/images/Sanatana Dharma/Brindavana Kumbabhishekam ceremony.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}><div className="tag">Temple Restoration</div></div>
+      <div className="g-item g2" style={{ backgroundImage: "url('/images/Events/Providing meal and food carriers to Govt Home Children.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}><div className="tag">Community Outreach</div></div>
+      <div className="g-item g3" style={{ backgroundImage: "url('/images/News/DHARA Divine Awards.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}><div className="tag">Divine Awards</div></div>
+      <div className="g-item g4" style={{ backgroundImage: "url('/images/Events/In Tribal welfare activities at Javadhu hills.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}><div className="tag">Tribal Welfare</div></div>
     </div>
   </div>
 </section>
@@ -534,19 +522,19 @@ export default function App() {
     </div>
     <div className="news-grid">
       <div className="news-card">
-        <div className="news-thumb"></div>
+        <div className="news-thumb" style={{ backgroundImage: "url('/images/News/Dhara Foundation – Registrations & Certifications.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
         <div className="news-date">20 Feb, 2025</div>
         <h4>Dhara Foundation — Registrations &amp; Certifications</h4>
         <a href="#" className="news-link">Read More <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
       </div>
       <div className="news-card">
-        <div className="news-thumb"></div>
+        <div className="news-thumb" style={{ backgroundImage: "url('/images/News/Governor of Maharashtra Appreciates DHARA Divine Awards 2025.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
         <div className="news-date">31 Aug, 2025</div>
         <h4>Governor of Maharashtra Appreciates Dhara Divine Awards 2025</h4>
         <a href="#" className="news-link">Read More <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
       </div>
       <div className="news-card">
-        <div className="news-thumb"></div>
+        <div className="news-thumb" style={{ backgroundImage: "url('/images/News/Send-Off Ceremony in Honour of His Excellency, Honourable Governor Shri R. N. Ravi..jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
         <div className="news-date">30 May, 2026</div>
         <h4>Send-Off Ceremony in Honour of Hon'ble Governor Shri R. N. Ravi</h4>
         <a href="#" className="news-link">Read More <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg></a>
