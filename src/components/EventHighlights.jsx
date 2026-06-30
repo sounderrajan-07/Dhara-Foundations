@@ -122,10 +122,6 @@ export default function EventHighlights() {
                 </div>
               </div>
             </div>
-            <div className="p-4 sm:hidden block">
-              <h4 className="text-sm font-bold text-forest-teal-dark font-sans">{img.title}</h4>
-              <p className="text-xs text-neutral-500 font-sans mt-0.5">{img.desc}</p>
-            </div>
           </div>
         ))}
       </div>
