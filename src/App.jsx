@@ -179,25 +179,25 @@ export default function App() {
   </div>
 </section>
 
-{/* Trust strip redesigned as a floating glassmorphic banner */}
-<div className="trust-strip-wrapper" style={{ position: 'relative', zIndex: 10, marginTop: '-32px', padding: '0 20px' }}>
-  <div className="glassmorphism max-w-6xl w-full mx-auto px-8 py-5 rounded-3xl flex flex-wrap justify-around items-center border border-[var(--color-card-border)]/50 shadow-premium gap-4 text-xs font-mono uppercase tracking-[1.5px]" style={{ background: 'rgba(255, 255, 255, 0.88)' }}>
-    <div className="trust-item" style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--color-deep-forest)' }}>
+{/* Redesigned floating glassmorphic trust banner */}
+<div className="trust-strip-wrapper">
+  <div className="trust-strip">
+    <div className="trust-item">
       <Sparkles className="w-3.5 h-3.5 text-[var(--color-saffron-glow)]" />
       <span>Indian Trust Act, 1882 — <b>Registered</b></span>
     </div>
     <span className="hidden md:inline" style={{ color: 'var(--color-card-border)' }}>|</span>
-    <div className="trust-item" style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--color-deep-forest)' }}>
+    <div className="trust-item">
       <Sparkles className="w-3.5 h-3.5 text-[var(--color-saffron-glow)]" />
       <span>80G &amp; 12A — <b>Tax Exempt</b></span>
     </div>
     <span className="hidden md:inline" style={{ color: 'var(--color-card-border)' }}>|</span>
-    <div className="trust-item" style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--color-deep-forest)' }}>
+    <div className="trust-item">
       <Sparkles className="w-3.5 h-3.5 text-[var(--color-saffron-glow)]" />
       <span>MCA — <b>CSR Approved</b></span>
     </div>
     <span className="hidden md:inline" style={{ color: 'var(--color-card-border)' }}>|</span>
-    <div className="trust-item" style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--color-deep-forest)' }}>
+    <div className="trust-item">
       <Sparkles className="w-3.5 h-3.5 text-[var(--color-saffron-glow)]" />
       <span>NGO Darpan — <b>TN/2024/0473120</b></span>
     </div>
