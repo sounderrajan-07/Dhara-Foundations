@@ -102,8 +102,8 @@ export default function EventRegistration({ onSubmitSuccess }) {
                   {t.price}
                 </span>
               </div>
-              <h3 className="text-xl font-serif font-bold mb-2">{t.name}</h3>
-              <p className={`text-sm mb-6 ${ticketType === t.id ? 'text-neutral-200' : 'text-neutral-500'}`}>
+              <h3 className={`text-xl font-serif font-bold mb-2 ${ticketType === t.id ? 'text-white' : 'text-forest-teal-dark'}`}>{t.name}</h3>
+              <p className={`text-sm mb-6 ${ticketType === t.id ? 'text-neutral-100' : 'text-neutral-500'}`}>
                 {t.description}
               </p>
               

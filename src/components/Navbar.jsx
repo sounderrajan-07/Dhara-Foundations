@@ -28,7 +28,7 @@ export default function Navbar({ activeTab, setActiveTab, mobileMenuOpen, setMob
         <div className="nav-inner">
           <a href="#" className="logo-floating" onClick={(e) => { e.preventDefault(); setActiveTab('home'); }}>
             <div className="logo-emblem-glow">
-              <img src="/logo/photo_6195100629672333271_y.jpg" alt="Dhara Foundations emblem" />
+              <img src="/logo/updated logo.png" alt="Dhara Foundations emblem" />
             </div>
           </a>
           
@@ -46,7 +46,7 @@ export default function Navbar({ activeTab, setActiveTab, mobileMenuOpen, setMob
               <a href="#" className={activeTab === 'contact' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('contact'); }}>Contact</a>
             </nav>
             <div className="nav-cta">
-              <button onClick={() => setActiveTab('nominations')} className="btn btn-gold">Nominate Now</button>
+              <button onClick={() => setActiveTab('nominations')} className="btn btn-gold sparkle-shimmer-btn">Nominate Now</button>
             </div>
           </div>
           

@@ -9,7 +9,7 @@ export default function Footer({ handleNavClick }) {
             <div>
               <div className="footer-logo-floating">
                 <div className="footer-logo-glow">
-                  <img src="/logo/photo_6195100629672333271_y.jpg" alt="Dhara Foundations emblem" />
+                  <img src="/logo/updated logo.png" alt="Dhara Foundations emblem" />
                 </div>
               </div>
               <p className="footer-about">
