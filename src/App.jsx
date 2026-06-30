@@ -137,7 +137,7 @@ export default function App() {
         </p>
         <div className="hero-actions">
           <button onClick={() => setActiveTab('donor')} className="btn btn-primary sparkle-shimmer-btn">Donate Now</button>
-          <button onClick={(e) => { e.preventDefault(); setActiveTab('registration'); }} className="btn btn-ghost" style={{ border: '1.5px solid var(--color-card-border)', color: 'var(--color-deep-forest)' }}>Explore Divine Awards 2026 →</button>
+          <button onClick={(e) => { e.preventDefault(); setActiveTab('registration'); }} className="btn btn-ghost-dark">Explore Divine Awards 2026 →</button>
         </div>
         <div className="hero-stats">
           <div className="hero-stat">
@@ -386,7 +386,7 @@ export default function App() {
         </div>
         <div className="awards-actions" style={{ display: 'flex', gap: '14px', flexWrap: 'wrap', marginTop: '30px' }}>
           <button onClick={() => setActiveTab('registration')} className="btn btn-primary sparkle-shimmer-btn">Register for Event</button>
-          <button onClick={() => setActiveTab('sponsorship')} className="btn btn-light" style={{ borderColor: 'rgba(255,255,255,0.45)' }}>Sponsorship Opportunities</button>
+          <button onClick={() => setActiveTab('sponsorship')} className="btn btn-light">Sponsorship Opportunities</button>
         </div>
       </div>
       <div className="awards-visual" style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', minHeight: '200px' }}>
@@ -558,7 +558,7 @@ export default function App() {
         </div>
         <h2 style={{ fontFamily: 'var(--font-serif)', color: 'var(--color-deep-forest-dark)', fontSize: '38px', marginTop: '12px' }}>Recent &amp; upcoming events</h2>
       </div>
-      <a href="#" className="btn btn-ghost" style={{ border: '1.5px solid var(--color-card-border)', color: 'var(--color-deep-forest)' }}>View All Events</a>
+      <a href="#" className="btn btn-ghost-dark">View All Events</a>
     </div>
     <div className="events-row">
       <div className="event-card glassmorphism-card group" style={{ borderRadius: '24px', overflow: 'hidden', border: '1px solid rgba(217, 203, 176, 0.45)' }}>
@@ -695,7 +695,7 @@ export default function App() {
       <p>Whether through volunteering, sponsorship, or a one-time gift — every contribution carries our mission forward.</p>
       <div className="cta-actions">
         <button onClick={() => setActiveTab('volunteer')} className="btn btn-light">Become a Volunteer</button>
-        <button onClick={() => setActiveTab('donor')} className="btn" style={{"background":"#fff","color":"var(--sunrise-deep)"}}>Donate Now</button>
+        <button onClick={() => setActiveTab('donor')} className="btn btn-white">Donate Now</button>
       </div>
     </div>
   </div>
