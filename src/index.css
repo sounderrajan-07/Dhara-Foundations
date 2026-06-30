@@ -228,12 +228,6 @@ header.nav {
   align-items: center;
   justify-content: space-between;
   padding: 10px 32px;
-  transition: all 0.3s ease;
-}
-.nav-inner:hover {
-  background: rgba(10, 58, 42, 0.65);
-  border-color: rgba(255, 255, 255, 0.35);
-  box-shadow: 0 12px 36px rgba(10, 58, 42, 0.25);
 }
 .logo-link {
   display: flex;
