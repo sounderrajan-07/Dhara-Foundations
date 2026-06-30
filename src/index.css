@@ -684,12 +684,47 @@ footer {
     width: 60px; height: 60px;
   }
   header.nav {
-    padding: 8px 0;
+    padding: 8px 16px;
   }
   nav.links { display:none; }
   .menu-toggle { display:flex; }
-  .nav-cta .btn-ghost { display:none; }
+  .nav-cta { display:none; }
   .wrap { padding:0 20px; }
+  .mobile-dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: rgba(10, 58, 42, 0.98);
+    border: 1.5px solid rgba(243, 167, 18, 0.3);
+    padding: 24px 28px;
+    position: absolute;
+    top: 100%;
+    left: 16px;
+    right: 16px;
+    margin-top: 8px;
+    border-radius: 24px;
+    z-index: 99;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    pointer-events: auto;
+  }
+  .mobile-dropdown-menu a {
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    padding: 4px 0;
+    transition: color 0.2s;
+  }
+  .mobile-dropdown-menu a:hover {
+    color: var(--color-saffron-glow);
+  }
+  .mobile-dropdown-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 4px 0;
+  }
   .hero { padding-top:24px; }
   .hero-copy h1 { font-size:34px; }
   .hero-stats { gap:24px; }
@@ -716,12 +751,33 @@ footer {
   }
 }
 
+/* ---------- Topbar Mobile Responsiveness ---------- */
+@media (max-width: 640px) {
+  .topbar-pill {
+    flex-direction: column;
+    border-radius: 16px;
+    padding: 8px 12px;
+    gap: 4px;
+    align-items: center;
+  }
+  .topbar-left {
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  .topbar-left .separator {
+    display: none;
+  }
+  .topbar-right {
+    margin-top: 2px;
+  }
+}
+
 /* ---------- Button Hover Override ---------- */
 button[class*="bg-forest-teal"]:hover,
 button.bg-forest-teal:hover,
 a.bg-forest-teal:hover {
-  background-color: var(--color-saffron-glow) !important;
-  background-image: none !important;
+  background: linear-gradient(135deg, var(--color-saffron-glow) 0%, var(--color-saffron-glow-dark) 100%) !important;
   color: var(--color-deep-forest-dark) !important;
   border-color: var(--color-saffron-glow) !important;
   box-shadow: 0 8px 24px rgba(243, 167, 18, 0.4) !important;
