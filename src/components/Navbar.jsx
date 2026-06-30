@@ -25,29 +25,26 @@ export default function Navbar({ activeTab, setActiveTab, mobileMenuOpen, setMob
 
       {/* Nav */}
       <header className="nav">
-        <div className="nav-inner">
-          <a href="#" className="logo-floating" onClick={(e) => { e.preventDefault(); setActiveTab('home'); }}>
-            <div className="logo-emblem-glow">
-              <img src="/logo/updated logo.png" alt="Dhara Foundations emblem" />
-            </div>
+        <div className="nav-inner animate-fade-in">
+          <a href="#" className="logo-link" onClick={(e) => { e.preventDefault(); setActiveTab('home'); }}>
+            <img src="/logo/updated logo.png" alt="Dhara Foundations" className="nav-logo-img" />
           </a>
           
-          <div className="nav-capsule">
-            <nav className="links">
-              <a href="#" className={activeTab === 'home' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('home'); }}>Home</a>
-              <a href="#" className={activeTab === 'highlights' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('highlights'); }}>Highlights</a>
-              <a href="#" className={activeTab === 'registration' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('registration'); }}>Register</a>
-              <a href="#" className={activeTab === 'nominations' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('nominations'); }}>Nominate</a>
-              <a href="#" className={activeTab === 'sponsorship' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('sponsorship'); }}>Sponsors</a>
-              <a href="#" className={activeTab === 'csr' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('csr'); }}>CSR</a>
-              <a href="#" className={activeTab === 'volunteer' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('volunteer'); }}>Volunteer</a>
-              <a href="#" className={activeTab === 'donor' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('donor'); }}>Donate</a>
-              <a href="#" className={activeTab === 'media' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('media'); }}>Media</a>
-              <a href="#" className={activeTab === 'contact' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('contact'); }}>Contact</a>
-            </nav>
-            <div className="nav-cta">
-              <button onClick={() => setActiveTab('nominations')} className="btn btn-gold sparkle-shimmer-btn">Nominate Now</button>
-            </div>
+          <nav className="links">
+            <a href="#" className={activeTab === 'home' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('home'); }}>Home</a>
+            <a href="#" className={activeTab === 'highlights' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('highlights'); }}>Highlights</a>
+            <a href="#" className={activeTab === 'registration' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('registration'); }}>Register</a>
+            <a href="#" className={activeTab === 'nominations' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('nominations'); }}>Nominate</a>
+            <a href="#" className={activeTab === 'sponsorship' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('sponsorship'); }}>Sponsors</a>
+            <a href="#" className={activeTab === 'csr' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('csr'); }}>CSR</a>
+            <a href="#" className={activeTab === 'volunteer' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('volunteer'); }}>Volunteer</a>
+            <a href="#" className={activeTab === 'donor' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('donor'); }}>Donate</a>
+            <a href="#" className={activeTab === 'media' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('media'); }}>Media</a>
+            <a href="#" className={activeTab === 'contact' ? 'active' : ''} onClick={(e) => { e.preventDefault(); setActiveTab('contact'); }}>Contact</a>
+          </nav>
+
+          <div className="nav-cta">
+            <button onClick={() => setActiveTab('donor')} className="btn btn-gold sparkle-shimmer-btn">Donate Now</button>
           </div>
           
           <button 
@@ -64,22 +61,22 @@ export default function Navbar({ activeTab, setActiveTab, mobileMenuOpen, setMob
 
       {/* Mobile nav dropdown overlay */}
       {mobileMenuOpen && (
-        <div className="lg:hidden" style={{ background: 'var(--ivory-deep)', borderBottom: '1px solid var(--line)', padding: '16px 20px', position: 'sticky', top: '73px', zIndex: '49' }}>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-            <a href="#" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); setActiveTab('home'); }}>Home</a>
-            <a href="#" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); setActiveTab('highlights'); }}>Highlights</a>
-            <a href="#" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); setActiveTab('registration'); }}>Register</a>
-            <a href="#" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); setActiveTab('nominations'); }}>Nominate</a>
-            <a href="#" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); setActiveTab('sponsorship'); }}>Sponsors</a>
-            <a href="#" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); setActiveTab('csr'); }}>CSR</a>
-            <a href="#" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); setActiveTab('volunteer'); }}>Volunteer</a>
-            <a href="#" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); setActiveTab('donor'); }}>Donate</a>
-            <a href="#" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); setActiveTab('media'); }}>Media</a>
-            <a href="#" style={{ color: 'var(--ink-soft)', fontWeight: '500' }} onClick={(e) => { e.preventDefault(); setActiveTab('contact'); }}>Contact</a>
+        <div style={{ background: 'rgba(10, 58, 42, 0.98)', border: '1px solid rgba(243, 167, 18, 0.3)', padding: '24px 28px', position: 'fixed', top: '135px', left: '16px', right: '16px', borderRadius: '24px', zIndex: '99', boxShadow: '0 20px 40px rgba(0,0,0,0.3)', backdropFilter: 'blur(10px)', WebkitBackdropFilter: 'blur(10px)' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            <a href="#" style={{ color: 'white', fontWeight: '600', fontSize: '15px' }} onClick={(e) => { e.preventDefault(); setActiveTab('home'); }}>Home</a>
+            <a href="#" style={{ color: 'white', fontWeight: '600', fontSize: '15px' }} onClick={(e) => { e.preventDefault(); setActiveTab('highlights'); }}>Highlights</a>
+            <a href="#" style={{ color: 'white', fontWeight: '600', fontSize: '15px' }} onClick={(e) => { e.preventDefault(); setActiveTab('registration'); }}>Register</a>
+            <a href="#" style={{ color: 'white', fontWeight: '600', fontSize: '15px' }} onClick={(e) => { e.preventDefault(); setActiveTab('nominations'); }}>Nominate</a>
+            <a href="#" style={{ color: 'white', fontWeight: '600', fontSize: '15px' }} onClick={(e) => { e.preventDefault(); setActiveTab('sponsorship'); }}>Sponsors</a>
+            <a href="#" style={{ color: 'white', fontWeight: '600', fontSize: '15px' }} onClick={(e) => { e.preventDefault(); setActiveTab('csr'); }}>CSR</a>
+            <a href="#" style={{ color: 'white', fontWeight: '600', fontSize: '15px' }} onClick={(e) => { e.preventDefault(); setActiveTab('volunteer'); }}>Volunteer</a>
+            <a href="#" style={{ color: 'white', fontWeight: '600', fontSize: '15px' }} onClick={(e) => { e.preventDefault(); setActiveTab('donor'); }}>Donate</a>
+            <a href="#" style={{ color: 'white', fontWeight: '600', fontSize: '15px' }} onClick={(e) => { e.preventDefault(); setActiveTab('media'); }}>Media</a>
+            <a href="#" style={{ color: 'white', fontWeight: '600', fontSize: '15px' }} onClick={(e) => { e.preventDefault(); setActiveTab('contact'); }}>Contact</a>
             
-            <div style={{ height: '1px', background: 'var(--line)', margin: '8px 0' }} />
+            <div style={{ height: '1px', background: 'rgba(255,255,255,0.1)', margin: '4px 0' }} />
             
-            <button onClick={() => setActiveTab('nominations')} className="btn btn-gold" style={{ width: '100%', justifyContent: 'center' }}>Nominate Now</button>
+            <button onClick={() => { setActiveTab('donor'); setMobileMenuOpen(false); }} className="btn btn-gold" style={{ width: '100%', justifyContent: 'center' }}>Donate Now</button>
           </div>
         </div>
       )}
