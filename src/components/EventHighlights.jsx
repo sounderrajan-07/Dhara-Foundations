@@ -31,7 +31,7 @@ export default function EventHighlights() {
 
   const galleryImages = [
     {
-      src: '/logo/photo_6195100629672333268_y.jpg',
+      src: '/logo/photo_6195100629672333270_y.jpg',
       title: 'Devotional Assembly',
       desc: 'Spiritual masters blessing the seva sadhaks.'
     },
