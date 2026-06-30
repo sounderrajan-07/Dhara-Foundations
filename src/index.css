@@ -13,7 +13,7 @@
   /* Legacy Color mappings for auto-compat with registration & other cards */
   --color-forest-teal: #0A3A2A;
   --color-forest-teal-dark: #082B2B;
-  --color-forest-teal-light: #9A8678;
+  --color-forest-teal-light: #F3A712;
   --color-sun-gold: #F3A712;
   --color-sun-gold-dark: #D9762E;
   --color-soft-sage: #F4EFE6;
@@ -204,17 +204,14 @@
 
 /* ---------- Nav ---------- */
 header.nav {
-  position: fixed;
-  top: 16px;
-  left: 0;
-  right: 0;
-  width: 100%;
+  position: sticky;
+  top: 0;
   z-index: 100;
   background: transparent;
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
   border-bottom: none;
-  padding: 0 16px;
+  padding: 12px 16px;
   pointer-events: none;
 }
 .nav-inner {
@@ -717,5 +714,22 @@ footer {
     justify-content: center;
     margin-bottom: 16px;
   }
+}
+
+/* ---------- Button Hover Override ---------- */
+button[class*="bg-forest-teal"]:hover,
+button.bg-forest-teal:hover,
+a.bg-forest-teal:hover {
+  background-color: var(--color-saffron-glow) !important;
+  background-image: none !important;
+  color: var(--color-deep-forest-dark) !important;
+  border-color: var(--color-saffron-glow) !important;
+  box-shadow: 0 8px 24px rgba(243, 167, 18, 0.4) !important;
+}
+button[class*="bg-forest-teal"]:hover svg,
+button.bg-forest-teal:hover svg,
+a.bg-forest-teal:hover svg {
+  color: var(--color-deep-forest-dark) !important;
+  stroke: var(--color-deep-forest-dark) !important;
 }
 
