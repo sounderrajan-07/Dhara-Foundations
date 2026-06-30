@@ -115,12 +115,16 @@ export default function EventHighlights() {
                   e.target.src = "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=80"; // fallback
                 }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-forest-teal-dark/65 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+              <div className="absolute inset-0 bg-gradient-to-t from-forest-teal-dark/65 via-transparent to-transparent opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 sm:flex hidden items-end p-4">
                 <div className="text-white">
                   <h4 className="text-sm font-bold font-sans">{img.title}</h4>
                   <p className="text-[10px] text-neutral-200 font-sans mt-0.5">{img.desc}</p>
                 </div>
               </div>
+            </div>
+            <div className="p-4 sm:hidden block bg-[#FDFBF7] border-t border-neutral-100">
+              <h4 className="text-sm font-bold text-forest-teal-dark font-sans">{img.title}</h4>
+              <p className="text-xs text-neutral-500 font-sans mt-1">{img.desc}</p>
             </div>
           </div>
         ))}
