@@ -206,7 +206,7 @@ export default function CorporateCSR({ onSubmitSuccess }) {
                 { title: "Measurable Social Impact", desc: "Data-driven results and impact certificates showing clear improvement in community welfare." },
                 { title: "Regular Progress Reports", desc: "Timely delivery of compliance utilization certificates, field audit sheets, and media packages." }
               ].map((item, idx) => (
-                <div key={idx} className="glassmorphism-card" style={{ padding: '24px', borderRadius: '18px', border: '1px solid rgba(217,203,176,0.35)', background: '#fff' }}>
+                <div key={idx} className="premium-interactive-card" style={{ padding: '24px' }}>
                   <h4 style={{ fontFamily: 'var(--font-serif)', color: 'var(--color-deep-forest-dark)', fontSize: '17px', fontWeight: 'bold', marginBottom: '8px' }}>
                     {item.title}
                   </h4>
@@ -219,29 +219,39 @@ export default function CorporateCSR({ onSubmitSuccess }) {
           </div>
 
           {/* Our Strengths Sidebar */}
-          <div className="glassmorphism-card" style={{ 
+          <div className="glassmorphism-card overflow-hidden hover-lift" style={{ 
             background: 'linear-gradient(135deg, rgba(10, 58, 42, 0.05) 0%, rgba(10, 58, 42, 0.01) 100%)',
             border: '1.5px solid rgba(217, 203, 176, 0.5)',
             borderRadius: '24px',
-            padding: '32px'
+            padding: '0 0 32px 0'
           }}>
-            <h3 style={{ fontFamily: 'var(--font-serif)', color: 'var(--color-deep-forest-dark)', fontSize: '22px', fontWeight: 'bold', marginBottom: '24px' }}>
-              Our Strengths
-            </h3>
-            <ul style={{ display: 'grid', gap: '18px', padding: 0, margin: 0, listStyle: 'none' }}>
-              {[
-                "Government-compliant CSR projects",
-                "PAN, 12A, and 80G certifications",
-                "Dedicated project management team",
-                "Impact assessment and reporting",
-                "Sustainable community development approach"
-              ].map((strength, idx) => (
-                <li key={idx} style={{ display: 'flex', alignItems: 'start', gap: '12px', fontSize: '14.5px', color: 'var(--color-deep-forest-dark)', fontWeight: '500' }}>
-                  <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0" style={{ marginTop: '2px' }} />
-                  <span>{strength}</span>
-                </li>
-              ))}
-            </ul>
+            <div className="img-zoom-container">
+              <img 
+                src="/images/csr_impact.png" 
+                alt="CSR Impact Digital Classroom" 
+                className="w-full h-48 object-cover"
+                style={{ display: 'block', marginBottom: '24px' }}
+              />
+            </div>
+            <div style={{ padding: '0 32px' }}>
+              <h3 style={{ fontFamily: 'var(--font-serif)', color: 'var(--color-deep-forest-dark)', fontSize: '22px', fontWeight: 'bold', marginBottom: '24px' }}>
+                Our Strengths
+              </h3>
+              <ul style={{ display: 'grid', gap: '18px', padding: 0, margin: 0, listStyle: 'none' }}>
+                {[
+                  "Government-compliant CSR projects",
+                  "PAN, 12A, and 80G certifications",
+                  "Dedicated project management team",
+                  "Impact assessment and reporting",
+                  "Sustainable community development approach"
+                ].map((strength, idx) => (
+                  <li key={idx} style={{ display: 'flex', alignItems: 'start', gap: '12px', fontSize: '14.5px', color: 'var(--color-deep-forest-dark)', fontWeight: '500' }}>
+                    <CheckCircle className="w-5 h-5 text-emerald-600 flex-shrink-0" style={{ marginTop: '2px' }} />
+                    <span>{strength}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
           
         </div>

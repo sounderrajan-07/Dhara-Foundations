@@ -264,7 +264,7 @@ export default function Sponsorship({ onSubmitSuccess }) {
 
       {/* 2. Why Partner With Us & About Grid */}
       <section className="wrap" style={{ marginTop: '100px' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: '60px', alignItems: 'center' }} className="grid grid-cols-1 md:grid-cols-2">
+        <div style={{ display: 'grid', gap: '36px', alignItems: 'start' }} className="grid grid-cols-1 lg:grid-cols-3">
           
           {/* Why Partner */}
           <div>
@@ -291,6 +291,31 @@ export default function Sponsorship({ onSubmitSuccess }) {
                 </li>
               ))}
             </ul>
+          </div>
+
+          {/* Corporate Sponsor Image Column */}
+          <div className="img-zoom-container hover-lift" style={{ 
+            background: '#ffffff', 
+            border: '1px solid rgba(217, 203, 176, 0.4)', 
+            borderRadius: '32px',
+            overflow: 'hidden'
+          }}>
+            <div style={{ overflow: 'hidden' }}>
+              <img 
+                src="/images/corporate_sponsors.png" 
+                alt="Corporate Sponsors Collaboration" 
+                className="w-full h-auto object-cover"
+                style={{ display: 'block' }}
+              />
+            </div>
+            <div style={{ padding: '28px' }}>
+              <h4 style={{ fontFamily: 'var(--font-serif)', color: '#0A3A2A', fontSize: '18px', fontWeight: 'bold', marginBottom: '8px' }}>
+                Join an Elite Network
+              </h4>
+              <p style={{ color: 'var(--ink-soft)', fontSize: '13px', lineHeight: '1.5', margin: 0 }}>
+                Align your brand with local and global leaders at the prestigious Divine Awards 2026.
+              </p>
+            </div>
           </div>
 
           {/* About Divine Awards */}
@@ -376,12 +401,8 @@ export default function Sponsorship({ onSubmitSuccess }) {
               items: ["Sponsor appreciation certificates", "Media and press coverage opportunities", "Stage recognition and vocal mentions", "Featured as a social impact partner"]
             }
           ].map((benefitGroup, idx) => (
-            <div key={idx} style={{ 
+            <div key={idx} className="premium-interactive-card" style={{ 
               padding: '36px', 
-              borderRadius: '28px', 
-              background: '#fff', 
-              border: '1px solid rgba(217, 203, 176, 0.4)',
-              boxShadow: '0 15px 30px -10px rgba(0, 0, 0, 0.03)',
               position: 'relative',
               overflow: 'hidden'
             }}>
