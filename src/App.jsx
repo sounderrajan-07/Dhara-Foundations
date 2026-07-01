@@ -393,7 +393,7 @@ export default function App() {
         <img 
           src="/images/Divine Awards 2026.jpg" 
           alt="Dhara Divine Awards 2026" 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover transition-transform duration-700 ease-in-out hover:scale-105"
           style={{ position: 'absolute', inset: 0 }}
           onError={(e) => {
             e.target.onerror = null;
