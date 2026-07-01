@@ -910,3 +910,55 @@ a.bg-forest-teal:hover svg {
   color: #ffffff !important;
 }
 
+/* ---------- Sponsorship Packages Custom Grid ---------- */
+.sponsor-packages-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sponsor-card-col {
+  grid-column: span 2;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sponsor-card-silver {
+  grid-column: 2 / span 2;
+}
+.sponsor-card-community {
+  grid-column: 4 / span 2;
+}
+
+@media (max-width: 1024px) {
+  .sponsor-packages-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .sponsor-card-col {
+    grid-column: span 1 !important;
+  }
+  .sponsor-card-silver {
+    grid-column: span 1 !important;
+  }
+  .sponsor-card-community {
+    grid-column: span 1 !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .sponsor-packages-container {
+    grid-template-columns: 1fr;
+  }
+  .sponsor-card-col {
+    grid-column: span 1 !important;
+  }
+  .sponsor-card-silver {
+    grid-column: span 1 !important;
+  }
+  .sponsor-card-community {
+    grid-column: span 1 !important;
+  }
+}
+
