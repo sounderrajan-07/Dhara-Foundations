@@ -240,11 +240,11 @@ header.nav {
   height: 92px;
   width: auto;
   object-fit: contain;
-  transform: scale(1.65) translateY(4px);
+  transform: scale(1.65) translateY(8px);
   transition: transform 0.3s ease;
 }
 .logo-link:hover .nav-logo-img {
-  transform: scale(1.7) translateY(4px);
+  transform: scale(1.7) translateY(8px);
 }
 
 nav.links { display: flex; gap: 6px; flex-wrap: nowrap; justify-content: center; align-items: center; }
