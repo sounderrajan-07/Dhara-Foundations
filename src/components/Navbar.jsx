@@ -1,24 +1,24 @@
 import React from 'react';
+import { Phone, Mail } from 'lucide-react';
 
 export default function Navbar({ activeTab, setActiveTab, mobileMenuOpen, setMobileMenuOpen }) {
   return (
     <>
       {/* Top utility bar */}
       <div className="topbar-container">
-        <div className="topbar-pill">
-          <div className="topbar-left">
-            <a href="tel:04422236641" className="topbar-link">
+        <div className="topbar-pill" style={{ justifyContent: 'center' }}>
+          <div className="topbar-left" style={{ gap: '24px', flexWrap: 'wrap', justifyContent: 'center' }}>
+            <a href="tel:04422236641" className="topbar-link" style={{ gap: '6px' }}>
+              <Phone className="w-3.5 h-3.5" style={{ color: '#3F8C4A' }} />
               <span className="label-helpline">Helpline</span>
               <span className="value-phone">044-22236641</span>
             </a>
-            <span className="separator">|</span>
-            <a href="mailto:info@dharafoundations.in" className="topbar-link">
+            <span className="separator" style={{ color: 'rgba(15, 76, 67, 0.15)' }}>|</span>
+            <a href="mailto:info@dharafoundations.in" className="topbar-link" style={{ gap: '6px' }}>
+              <Mail className="w-3.5 h-3.5" style={{ color: '#3F8C4A' }} />
               <span className="label-email">Email</span>
               <span className="value-email">info@dharafoundations.in</span>
             </a>
-          </div>
-          <div className="topbar-right">
-            <span className="location">Tambaram Sanatorium</span>
           </div>
         </div>
       </div>
