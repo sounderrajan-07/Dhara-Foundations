@@ -389,14 +389,17 @@ export default function App() {
           <button onClick={() => setActiveTab('sponsorship')} className="btn btn-light">Sponsorship Opportunities</button>
         </div>
       </div>
-      <div className="awards-visual" style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%', minHeight: '200px' }}>
-        <svg className="rotating-mandala" viewBox="0 0 100 100" fill="none" style={{ position: 'absolute', width: '90%', height: '90%', opacity: 0.2 }}>
-          <circle cx="50" cy="50" r="46" stroke="var(--color-saffron-glow)" strokeWidth="0.8" strokeDasharray="1 3"/>
-          <circle cx="50" cy="50" r="40" stroke="var(--color-card-border)" strokeWidth="0.5" strokeDasharray="2 4"/>
-        </svg>
-        <svg viewBox="0 0 100 100" fill="none" style={{ width: '46%', height: '46%', position: 'relative', zIndex: 2 }}>
-          <path d="M50 70V40M50 40c0-8-6-12-13-12 0 8 5 13 13 13zM50 40c0-8 6-12 13-12 0 8-5 13-13 13z" stroke="var(--color-saffron-glow)" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-        </svg>
+      <div className="awards-visual" style={{ position: 'relative', overflow: 'hidden', height: '100%', minHeight: '320px', borderRadius: '26px' }}>
+        <img 
+          src="/images/Divine Awards 2026.jpg" 
+          alt="Dhara Divine Awards 2026" 
+          className="w-full h-full object-cover"
+          style={{ position: 'absolute', inset: 0 }}
+          onError={(e) => {
+            e.target.onerror = null;
+            e.target.src = "https://images.unsplash.com/photo-1531058020387-3be344559be6?auto=format&fit=crop&w=800&q=80";
+          }}
+        />
       </div>
     </div>
   </div>
