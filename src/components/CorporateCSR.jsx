@@ -156,7 +156,8 @@ export default function CorporateCSR({ onSubmitSuccess }) {
             lineHeight: '1.15', 
             maxWidth: '850px',
             margin: '0 auto 24px',
-            fontWeight: '600'
+            fontWeight: '600',
+            color: '#ffffff'
           }}>
             Empowering Communities Through Meaningful CSR Partnerships
           </h1>
