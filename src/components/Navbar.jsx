@@ -49,8 +49,8 @@ export default function Navbar({ activeTab, setActiveTab, mobileMenuOpen, setMob
           
           <button 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)} 
-            className="menu-toggle" 
-            aria-label="Open menu"
+            className={`menu-toggle ${mobileMenuOpen ? 'open' : ''}`} 
+            aria-label="Toggle menu"
           >
             <span></span>
             <span></span>
