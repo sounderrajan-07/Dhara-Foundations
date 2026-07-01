@@ -879,3 +879,34 @@ a.bg-forest-teal:hover svg {
   stroke: var(--color-deep-forest-dark) !important;
 }
 
+/* ---------- Operations Dashboard Custom Styles ---------- */
+.dashboard-category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+@media (max-width: 991px) {
+  .dashboard-category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .dashboard-category-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dashboard-panel-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(10, 58, 42, 0.25) !important;
+  box-shadow: 0 20px 40px -15px rgba(10, 58, 42, 0.12) !important;
+  background: #ffffff !important;
+}
+.dashboard-panel-card:hover .card-top-glow {
+  transform: scaleX(1) !important;
+}
+.dashboard-panel-card:hover .impact-icon {
+  background: var(--color-deep-forest) !important;
+  color: #ffffff !important;
+}
+

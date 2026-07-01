@@ -17,9 +17,100 @@ import GeneralEnquiries from './components/GeneralEnquiries';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
+const dashboardCategories = [
+  { id: 'seva', label: 'Participation & Seva' },
+  { id: 'giving', label: 'Partnerships & Giving' },
+  { id: 'recognition', label: 'Recognition & Press' }
+];
+
+const dashboardItems = [
+  {
+    id: 'registration',
+    category: 'seva',
+    label: 'Event Booking',
+    description: 'Secure delegate or VIP tickets, choose dietary options, and get instant entry passes.',
+    icon: Ticket,
+    actionLabel: 'Book Tickets',
+    accentColor: 'var(--color-primary-accent)'
+  },
+  {
+    id: 'volunteer',
+    category: 'seva',
+    label: 'Volunteer Seva',
+    description: 'Register your availability, coordinate skills, and join local execution cells.',
+    icon: Heart,
+    actionLabel: 'Join Seva',
+    accentColor: 'var(--color-primary-accent)'
+  },
+  {
+    id: 'contact',
+    category: 'seva',
+    label: 'General Enquiries',
+    description: 'Submit questions and get quick guidance or direct support from our helpdesk.',
+    icon: MessageSquare,
+    actionLabel: 'Send Enquiry',
+    accentColor: 'var(--color-primary-accent)'
+  },
+  {
+    id: 'sponsorship',
+    category: 'giving',
+    label: 'Sponsorship Options',
+    description: 'View corporate tiers (Platinum, Gold, Silver) and explore flagship deliverables.',
+    icon: Handshake,
+    actionLabel: 'View Tiers',
+    accentColor: 'var(--color-saffron-glow)'
+  },
+  {
+    id: 'donor',
+    category: 'giving',
+    label: 'Giving Gateway',
+    description: 'Pre-set tax-exempt micro-donations and claim instant 80G tax benefit receipts.',
+    icon: Gift,
+    actionLabel: 'Donate Now',
+    accentColor: 'var(--color-saffron-glow)'
+  },
+  {
+    id: 'csr',
+    category: 'giving',
+    label: 'Corporate CSR',
+    description: 'Register institutional budgets, CIN number, and check Section 135 compliance targets.',
+    icon: Briefcase,
+    actionLabel: 'Partner Up',
+    accentColor: 'var(--color-saffron-glow)'
+  },
+  {
+    id: 'nominations',
+    category: 'recognition',
+    label: 'Award Nominations',
+    description: 'Submit multi-step physical nominations to recognize unsung grassroots heroes.',
+    icon: Award,
+    actionLabel: 'Submit Nomination',
+    accentColor: 'var(--color-saffron-glow-dark)'
+  },
+  {
+    id: 'media',
+    category: 'recognition',
+    label: 'Press & Media Kit',
+    description: 'Request official press passes, download logos, and access coverage archives.',
+    icon: Newspaper,
+    actionLabel: 'Media Panel',
+    accentColor: 'var(--color-saffron-glow-dark)'
+  },
+  {
+    id: 'highlights',
+    category: 'recognition',
+    label: 'Event Highlights',
+    description: 'View event metrics, filtered gallery listings, and past Divine Awards statistics.',
+    icon: Image,
+    actionLabel: 'View Archive',
+    accentColor: 'var(--color-saffron-glow-dark)'
+  }
+];
+
 export default function App() {
   const [activeTab, setActiveTab] = useState('home');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [dashboardCategory, setDashboardCategory] = useState('seva');
   
   // Thank You State
   const [successData, setSuccessData] = useState(null);
@@ -410,144 +501,138 @@ export default function App() {
 {/* Operations Portal / Seva Dashboard */}
 <section id="seva-dashboard" className="reveal">
   <div className="wrap">
-    <div className="section-head">
-      <div className="eyebrow" style={{ color: 'var(--color-primary-accent)', fontFamily: 'var(--font-mono)' }}>
+    <div className="section-head" style={{ textAlign: 'center', marginBottom: '40px' }}>
+      <div className="eyebrow" style={{ color: 'var(--color-primary-accent)', fontFamily: 'var(--font-mono)', justifyContent: 'center' }}>
         <svg className="sprout" viewBox="0 0 16 22" fill="none">
           <path d="M8 22V11M8 11C8 6 4 4 1 4c0 5 3 7 7 7zM8 11c0-5 4-7 7-7 0 5-3 7-7 7z" stroke="var(--color-saffron-glow)" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
         Seva Portal
       </div>
-      <h2 style={{ fontFamily: 'var(--font-serif)', color: 'var(--color-deep-forest-dark)' }}>Operations Dashboard</h2>
-      <p style={{ color: 'var(--ink-soft)' }}>Select an operational panel below to access dedicated tools and registration pages</p>
+      <h2 style={{ fontFamily: 'var(--font-serif)', color: 'var(--color-deep-forest-dark)', fontSize: '38px', marginTop: '12px' }}>Operations Dashboard</h2>
+      <p style={{ color: 'var(--ink-soft)', maxWidth: '600px', margin: '10px auto 0' }}>Explore dedicated tools, register availability for social activities, or check corporate alignment portals below.</p>
     </div>
-    <div className="impact-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
-      
-      <div onClick={() => setActiveTab('registration')} className="impact-card glassmorphism-card cursor-pointer" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%', borderRadius: '24px', border: '1px solid rgba(217, 203, 176, 0.45)', padding: '28px' }}>
-        <div>
-          <div className="impact-icon" style={{ background: 'var(--color-card-cream)' }}>
-            <Ticket className="w-5 h-5" style={{ color: 'var(--color-saffron-glow-dark)' }} />
-          </div>
-          <h4 style={{ fontFamily: 'var(--font-serif)', fontSize: '18px', fontWeight: 'bold', color: 'var(--color-deep-forest-dark)', margin: '14px 0 8px' }}>Event Booking</h4>
-          <p style={{ color: 'var(--ink-soft)', fontSize: '13.5px' }}>Secure delegate or VIP tickets, choose dietary options.</p>
-        </div>
-        <div style={{ display: 'flex', alignItems: 'center', fontSize: '12px', fontWeight: 'bold', color: 'var(--color-primary-accent)', marginTop: '20px', fontFamily: 'var(--font-mono)', textTransform: 'uppercase', letterSpacing: '1px' }}>
-          <span>Book Tickets</span>
-          <ArrowRight className="w-4 h-4 ml-1.5" />
-        </div>
-      </div>
 
-      <div onClick={() => setActiveTab('sponsorship')} className="impact-card glassmorphism-card cursor-pointer" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%', borderRadius: '24px', border: '1px solid rgba(217, 203, 176, 0.45)', padding: '28px' }}>
-        <div>
-          <div className="impact-icon" style={{ background: 'var(--color-card-cream)' }}>
-            <Handshake className="w-5 h-5" style={{ color: 'var(--color-saffron-glow-dark)' }} />
-          </div>
-          <h4 style={{ fontFamily: 'var(--font-serif)', fontSize: '18px', fontWeight: 'bold', color: 'var(--color-deep-forest-dark)', margin: '14px 0 8px' }}>Sponsorship Options</h4>
-          <p style={{ color: 'var(--ink-soft)', fontSize: '13.5px' }}>View Platinum, Gold, Silver tiers and sponsorship deliverables.</p>
-        </div>
-        <div style={{ display: 'flex', alignItems: 'center', fontSize: '12px', fontWeight: 'bold', color: 'var(--color-primary-accent)', marginTop: '20px', fontFamily: 'var(--font-mono)', textTransform: 'uppercase', letterSpacing: '1px' }}>
-          <span>View Tiers</span>
-          <ArrowRight className="w-4 h-4 ml-1.5" />
-        </div>
-      </div>
+    {/* Modern Categories Selector Tab List */}
+    <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', marginBottom: '44px', flexWrap: 'wrap' }}>
+      {dashboardCategories.map((cat) => {
+        const isSelected = dashboardCategory === cat.id;
+        return (
+          <button
+            key={cat.id}
+            onClick={() => setDashboardCategory(cat.id)}
+            style={{
+              padding: '12px 24px',
+              borderRadius: '999px',
+              border: '1.5px solid',
+              borderColor: isSelected ? 'var(--color-primary-accent)' : 'rgba(217, 203, 176, 0.45)',
+              background: isSelected ? 'var(--color-deep-forest)' : 'rgba(255, 255, 255, 0.6)',
+              color: isSelected ? '#fff' : 'var(--color-deep-forest-dark)',
+              fontSize: '14.5px',
+              fontWeight: '600',
+              cursor: 'pointer',
+              boxShadow: isSelected ? '0 10px 20px -8px rgba(10, 58, 42, 0.3)' : 'none',
+              transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+            }}
+            className={isSelected ? 'sparkle-shimmer-btn' : ''}
+          >
+            {cat.label}
+          </button>
+        );
+      })}
+    </div>
 
-      <div onClick={() => setActiveTab('volunteer')} className="impact-card glassmorphism-card cursor-pointer" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%', borderRadius: '24px', border: '1px solid rgba(217, 203, 176, 0.45)', padding: '28px' }}>
-        <div>
-          <div className="impact-icon" style={{ background: 'var(--color-card-cream)' }}>
-            <Heart className="w-5 h-5" style={{ color: 'var(--color-saffron-glow-dark)' }} />
-          </div>
-          <h4 style={{ fontFamily: 'var(--font-serif)', fontSize: '18px', fontWeight: 'bold', color: 'var(--color-deep-forest-dark)', margin: '14px 0 8px' }}>Volunteer Seva</h4>
-          <p style={{ color: 'var(--ink-soft)', fontSize: '13.5px' }}>Register availability, alignment, and coordinate skills.</p>
-        </div>
-        <div style={{ display: 'flex', alignItems: 'center', fontSize: '12px', fontWeight: 'bold', color: 'var(--color-primary-accent)', marginTop: '20px', fontFamily: 'var(--font-mono)', textTransform: 'uppercase', letterSpacing: '1px' }}>
-          <span>Join Seva</span>
-          <ArrowRight className="w-4 h-4 ml-1.5" />
-        </div>
-      </div>
+    {/* Dynamic Cards Grid */}
+    <div className="dashboard-category-grid">
+      {dashboardItems.filter(item => item.category === dashboardCategory).map((item) => {
+        const Icon = item.icon;
+        return (
+          <div
+            key={item.id}
+            onClick={() => setActiveTab(item.id)}
+            className="impact-card glassmorphism-card cursor-pointer group dashboard-panel-card"
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+              height: '100%',
+              borderRadius: '24px',
+              border: '1.5px solid rgba(217, 203, 176, 0.4)',
+              padding: '32px',
+              background: 'rgba(255, 255, 255, 0.65)',
+              transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
+              position: 'relative',
+              overflow: 'hidden',
+              boxShadow: '0 4px 20px -10px rgba(0,0,0,0.05)',
+              minHeight: '260px'
+            }}
+          >
+            {/* Top Hover Glow Accent */}
+            <div style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              right: 0,
+              height: '4px',
+              background: 'linear-gradient(90deg, var(--color-saffron-glow) 0%, var(--color-primary-accent) 100%)',
+              transform: 'scaleX(0)',
+              transformOrigin: 'left',
+              transition: 'transform 0.4s ease'
+            }} className="card-top-glow" />
 
-      <div onClick={() => setActiveTab('donor')} className="impact-card glassmorphism-card cursor-pointer" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%', borderRadius: '24px', border: '1px solid rgba(217, 203, 176, 0.45)', padding: '28px' }}>
-        <div>
-          <div className="impact-icon" style={{ background: 'var(--color-card-cream)' }}>
-            <Gift className="w-5 h-5" style={{ color: 'var(--color-saffron-glow-dark)' }} />
-          </div>
-          <h4 style={{ fontFamily: 'var(--font-serif)', fontSize: '18px', fontWeight: 'bold', color: 'var(--color-deep-forest-dark)', margin: '14px 0 8px' }}>Giving Gateway</h4>
-          <p style={{ color: 'var(--ink-soft)', fontSize: '13.5px' }}>Pre-set micro-donations and claim 80G tax benefits.</p>
-        </div>
-        <div style={{ display: 'flex', alignItems: 'center', fontSize: '12px', fontWeight: 'bold', color: 'var(--color-primary-accent)', marginTop: '20px', fontFamily: 'var(--font-mono)', textTransform: 'uppercase', letterSpacing: '1px' }}>
-          <span>Donate Now</span>
-          <ArrowRight className="w-4 h-4 ml-1.5" />
-        </div>
-      </div>
+            <div>
+              <div
+                className="impact-icon"
+                style={{
+                  background: 'rgba(10, 58, 42, 0.05)',
+                  width: '50px',
+                  height: '50px',
+                  borderRadius: '14px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: 'var(--color-primary-accent)',
+                  transition: 'all 0.3s ease'
+                }}
+              >
+                <Icon className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />
+              </div>
+              <h4 style={{
+                fontFamily: 'var(--font-serif)',
+                fontSize: '20px',
+                fontWeight: 'bold',
+                color: 'var(--color-deep-forest-dark)',
+                margin: '20px 0 10px',
+                transition: 'color 0.3s ease'
+              }} className="group-hover:text-forest-green">
+                {item.label}
+              </h4>
+              <p style={{
+                color: 'var(--ink-soft)',
+                fontSize: '14px',
+                lineHeight: '1.55',
+                margin: 0
+              }}>
+                {item.description}
+              </p>
+            </div>
 
-      <div onClick={() => setActiveTab('csr')} className="impact-card glassmorphism-card cursor-pointer" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%', borderRadius: '24px', border: '1px solid rgba(217, 203, 176, 0.45)', padding: '28px' }}>
-        <div>
-          <div className="impact-icon" style={{ background: 'var(--color-card-cream)' }}>
-            <Briefcase className="w-5 h-5" style={{ color: 'var(--color-saffron-glow-dark)' }} />
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              fontSize: '12px',
+              fontWeight: 'bold',
+              color: 'var(--color-primary-accent)',
+              marginTop: '28px',
+              fontFamily: 'var(--font-mono)',
+              textTransform: 'uppercase',
+              letterSpacing: '1px'
+            }}>
+              <span>{item.actionLabel}</span>
+              <ArrowRight className="w-4 h-4 ml-1.5 transition-transform duration-300 group-hover:translate-x-1.5" />
+            </div>
           </div>
-          <h4 style={{ fontFamily: 'var(--font-serif)', fontSize: '18px', fontWeight: 'bold', color: 'var(--color-deep-forest-dark)', margin: '14px 0 8px' }}>Corporate CSR</h4>
-          <p style={{ color: 'var(--ink-soft)', fontSize: '13.5px' }}>Register institutional budgets, CIN, and joint targets.</p>
-        </div>
-        <div style={{ display: 'flex', alignItems: 'center', fontSize: '12px', fontWeight: 'bold', color: 'var(--color-primary-accent)', marginTop: '20px', fontFamily: 'var(--font-mono)', textTransform: 'uppercase', letterSpacing: '1px' }}>
-          <span>Partner Up</span>
-          <ArrowRight className="w-4 h-4 ml-1.5" />
-        </div>
-      </div>
-
-      <div onClick={() => setActiveTab('nominations')} className="impact-card glassmorphism-card cursor-pointer" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%', borderRadius: '24px', border: '1px solid rgba(217, 203, 176, 0.45)', padding: '28px' }}>
-        <div>
-          <div className="impact-icon" style={{ background: 'var(--color-card-cream)' }}>
-            <Award className="w-5 h-5" style={{ color: 'var(--color-saffron-glow-dark)' }} />
-          </div>
-          <h4 style={{ fontFamily: 'var(--font-serif)', fontSize: '18px', fontWeight: 'bold', color: 'var(--color-deep-forest-dark)', margin: '14px 0 8px' }}>Award Nominations</h4>
-          <p style={{ color: 'var(--ink-soft)', fontSize: '13.5px' }}>Submit multi-step nominations for grassroots unsung heroes.</p>
-        </div>
-        <div style={{ display: 'flex', alignItems: 'center', fontSize: '12px', fontWeight: 'bold', color: 'var(--color-primary-accent)', marginTop: '20px', fontFamily: 'var(--font-mono)', textTransform: 'uppercase', letterSpacing: '1px' }}>
-          <span>Submit Nomination</span>
-          <ArrowRight className="w-4 h-4 ml-1.5" />
-        </div>
-      </div>
-
-      <div onClick={() => setActiveTab('media')} className="impact-card glassmorphism-card cursor-pointer" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%', borderRadius: '24px', border: '1px solid rgba(217, 203, 176, 0.45)', padding: '28px' }}>
-        <div>
-          <div className="impact-icon" style={{ background: 'var(--color-card-cream)' }}>
-            <Newspaper className="w-5 h-5" style={{ color: 'var(--color-saffron-glow-dark)' }} />
-          </div>
-          <h4 style={{ fontFamily: 'var(--font-serif)', fontSize: '18px', fontWeight: 'bold', color: 'var(--color-deep-forest-dark)', margin: '14px 0 8px' }}>Press & Media Kit</h4>
-          <p style={{ color: 'var(--ink-soft)', fontSize: '13.5px' }}>Request journalist credentials and download media assets.</p>
-        </div>
-        <div style={{ display: 'flex', alignItems: 'center', fontSize: '12px', fontWeight: 'bold', color: 'var(--color-primary-accent)', marginTop: '20px', fontFamily: 'var(--font-mono)', textTransform: 'uppercase', letterSpacing: '1px' }}>
-          <span>Media Panel</span>
-          <ArrowRight className="w-4 h-4 ml-1.5" />
-        </div>
-      </div>
-
-      <div onClick={() => setActiveTab('highlights')} className="impact-card glassmorphism-card cursor-pointer" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%', borderRadius: '24px', border: '1px solid rgba(217, 203, 176, 0.45)', padding: '28px' }}>
-        <div>
-          <div className="impact-icon" style={{ background: 'var(--color-card-cream)' }}>
-            <Image className="w-5 h-5" style={{ color: 'var(--color-saffron-glow-dark)' }} />
-          </div>
-          <h4 style={{ fontFamily: 'var(--font-serif)', fontSize: '18px', fontWeight: 'bold', color: 'var(--color-deep-forest-dark)', margin: '14px 0 8px' }}>Event Highlights</h4>
-          <p style={{ color: 'var(--ink-soft)', fontSize: '13.5px' }}>View statistics, visual archives, and annual impact reports.</p>
-        </div>
-        <div style={{ display: 'flex', alignItems: 'center', fontSize: '12px', fontWeight: 'bold', color: 'var(--color-primary-accent)', marginTop: '20px', fontFamily: 'var(--font-mono)', textTransform: 'uppercase', letterSpacing: '1px' }}>
-          <span>View Archive</span>
-          <ArrowRight className="w-4 h-4 ml-1.5" />
-        </div>
-      </div>
-
-      <div onClick={() => setActiveTab('contact')} className="impact-card glassmorphism-card cursor-pointer" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '100%', borderRadius: '24px', border: '1px solid rgba(217, 203, 176, 0.45)', padding: '28px' }}>
-        <div>
-          <div className="impact-icon" style={{ background: 'var(--color-card-cream)' }}>
-            <MessageSquare className="w-5 h-5" style={{ color: 'var(--color-saffron-glow-dark)' }} />
-          </div>
-          <h4 style={{ fontFamily: 'var(--font-serif)', fontSize: '18px', fontWeight: 'bold', color: 'var(--color-deep-forest-dark)', margin: '14px 0 8px' }}>General Enquiries</h4>
-          <p style={{ color: 'var(--ink-soft)', fontSize: '13.5px' }}>Submit questions and get quick guidance or support.</p>
-        </div>
-        <div style={{ display: 'flex', alignItems: 'center', fontSize: '12px', fontWeight: 'bold', color: 'var(--color-primary-accent)', marginTop: '20px', fontFamily: 'var(--font-mono)', textTransform: 'uppercase', letterSpacing: '1px' }}>
-          <span>Send Enquiry</span>
-          <ArrowRight className="w-4 h-4 ml-1.5" />
-        </div>
-      </div>
-
+        );
+      })}
     </div>
   </div>
 </section>
